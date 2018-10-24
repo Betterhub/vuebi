@@ -1,0 +1,21 @@
+import {
+    AsyncStorage,
+    Platform
+} from 'react-native';
+
+export default {
+    async isLogin(){
+        let data = await AsyncStorage.getItem('TOKEN');
+        // console.log(data);
+        if (data === null){
+            console.log('false');
+            global.TOKEN = false;
+            return false;
+        }else {
+            console.log('true');
+            global.TOKEN = true;
+            return true;
+        }
+
+    }
+}

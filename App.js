@@ -11,6 +11,8 @@ import {
   Stack,
   
 } from 'react-native-router-flux';
+import { Icon } from 'antd-mobile-rn';
+
 
 // Views
 import {
@@ -69,6 +71,7 @@ const scenes = Actions.create(
         <Scene
           key='bibi_key'
           component={BiBiView}
+          icon={() => <Icon type="check" size="md" color="red" />}
         />
       </Stack>
       <Stack

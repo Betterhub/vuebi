@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { DatePicker, List } from 'antd-mobile-rn';
+import { DatePicker, List, Icon } from 'antd-mobile-rn';
 import { View } from 'react-native';
 
 export default class App extends Component {
@@ -10,6 +10,7 @@ export default class App extends Component {
         <DatePicker mode="datetime">
           <List.Item arrow="horizontal">
             bibi
+            <Icon type="check" size="md" color="red" />
           </List.Item>
         </DatePicker>
       </List>
