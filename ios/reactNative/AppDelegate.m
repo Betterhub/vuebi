@@ -14,6 +14,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+  
+  [[UIFont familyNames] enumerateObjectsUsingBlock:^(NSString * _Nonnull fontName, NSUInteger idx, BOOL * _Nonnull stop) {
+    
+  
+    [[UIFont fontNamesForFamilyName:fontName] enumerateObjectsUsingBlock:^(NSString * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+      
+      NSLog(@"%s", [obj UTF8String]);
+      
+    }];
+    
+  }];
+  
+  
+  
   NSURL *jsCodeLocation;
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
